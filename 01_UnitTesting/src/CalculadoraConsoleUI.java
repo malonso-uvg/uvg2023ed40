@@ -13,12 +13,39 @@ public class CalculadoraConsoleUI {
 	private Scanner _in;
 	private ICalculator miCalculadora;
 	
-	public CalculadoraConsoleUI(Scanner _scanner) {
+	public CalculadoraConsoleUI(Scanner _scanner, ICalculator _calculator) {
 		_in = _scanner;
-		miCalculadora = new CalculadoraSumas();
+		miCalculadora = _calculator;
 	}
 	
-	public void IniciarCalculadora() {
+	public void MenuPrincipal() {
+		
+		int option = 0;
+		
+		do {
+			
+			System.out.println("*** CALCULADORA ***");
+			System.out.println("Seleccione su opcion");
+			System.out.println("1. Suma de dos numeros");
+			System.out.println("2. Resta de dos numeros");
+			System.out.println("3. Multiplicacion de dos numeros");
+			System.out.println("4. Division Entera de dos numeros");
+			System.out.println("5. Residuo de dos numeros");
+			System.out.println("6. Salir");
+			
+			option = Integer.parseInt(_in.nextLine());
+			
+			switch (option) {
+			case 1:{ EjecutarSuma(); }break;
+			case 2:{ EjecutarResta(); }break;
+			case 3:{ EjecutarMultiplicacion(); }break;
+			case 4:{ EjecutarDivision(); }break;
+			case 5:{ EjecutarModulo(); }break;
+			case 6:{ System.out.println("HASTA PRONTO!"); }break;
+			default:{ System.out.println("OPCION NO VALIDA, INTENTE NUEVAMENTE"); }break;
+			}
+			
+		}while (option != 6);
 		
 	}
 	
