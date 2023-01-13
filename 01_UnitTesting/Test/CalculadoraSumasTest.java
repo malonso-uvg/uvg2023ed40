@@ -12,7 +12,9 @@ import org.junit.jupiter.api.Test;
  */
 class CalculadoraSumasTest {
 
-	ICalculator miCalculadora = new CalculadoraSumas();
+	//ICalculator miCalculadora = new CalculadoraSumas();
+	ICalculator miCalculadora = new CalculadoraNormal();
+	//CalculadoraSumas miCalculadora = new CalculadoraSumas();
 	
 	@Test
 	void TC1_SumaPositivosTest() {
