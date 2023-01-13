@@ -1,7 +1,7 @@
 /**
  * @author moises.alonso
  */
-public interface ICalculator {
+public interface IRadio {
 	
 	public void on();
 	
