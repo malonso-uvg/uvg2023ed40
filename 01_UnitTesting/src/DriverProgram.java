@@ -24,7 +24,8 @@ public class DriverProgram {
 		switch(opt) {
 		
 		case "1": {
-			CalculadoraConsoleUI consoleUI = new CalculadoraConsoleUI(in, new CalculadoraSumas());
+			//CalculadoraConsoleUI consoleUI = new CalculadoraConsoleUI(in, new CalculadoraSumas());
+			CalculadoraConsoleUI consoleUI = new CalculadoraConsoleUI(in, new CalculadoraNormal());
 			consoleUI.MenuPrincipal();
 		} break;
 		
