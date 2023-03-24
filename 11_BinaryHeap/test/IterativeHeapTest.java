@@ -7,11 +7,17 @@ class IterativeHeapTest {
 	@Test
 	void test() {
 		HeapUsingIterativeBinaryTree<Integer, String> myHeap = new HeapUsingIterativeBinaryTree<Integer, String>(new ComparadorNumeros<Integer>());
-		myHeap.Insert(20, "");
-		myHeap.Insert(10, "");
-		myHeap.Insert(15, "");
-		myHeap.Insert(5, "");
-		myHeap.Insert(10, "");
+		myHeap.Insert(20, "veinte");
+		myHeap.Insert(10, "diez");
+		myHeap.Insert(15, "quince");
+		myHeap.Insert(5, "cinco");
+		myHeap.Insert(10, "diez");
+		
+		assertEquals("veinte", myHeap.remove());
+		assertEquals("quince", myHeap.remove());
+		//assertEquals("diez", myHeap.remove());
+		
+		
 	}
 
 }
