@@ -15,7 +15,9 @@ class IterativeHeapTest {
 		
 		assertEquals("veinte", myHeap.remove());
 		assertEquals("quince", myHeap.remove());
-		//assertEquals("diez", myHeap.remove());
+		assertEquals("diez", myHeap.remove());
+		assertEquals("diez", myHeap.remove());
+		assertEquals("cinco", myHeap.remove());
 		
 		
 	}

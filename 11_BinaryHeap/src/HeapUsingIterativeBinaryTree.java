@@ -257,6 +257,8 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 					
 					actual.get_left().set_priority(tempPriority2);
 					actual.get_left().set_value(tempValue2);
+				} else {
+					break;
 				}
 			} else { //Solo tiene derecho
 				int result = _priorityComparator.compare(actual.get_priority(), actual.get_right().get_priority());
@@ -269,6 +271,8 @@ public class HeapUsingIterativeBinaryTree<P, V> implements IHeap<P, V> {
 					
 					actual.get_right().set_priority(tempPriority2);
 					actual.get_right().set_value(tempValue2);
+				} else {
+					break;
 				}
 			}
 		}
