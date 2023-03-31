@@ -26,6 +26,8 @@ class ListTests {
 		DoubleLinkedList<String> miLista = new DoubleLinkedList<String>();
 		assertEquals(miLista.DOUBLE_LINKED_LIST, miLista.getType()); //Verifico que sea una lista simplemente encadenada
 		
+		assertEquals(DoubleLinkedList.class, miLista.getClass());
+		
 		miLista.InsertAtStart("primero");
 		miLista.InsertAtStart("segundo");
 		
