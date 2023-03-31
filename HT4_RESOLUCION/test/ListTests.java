@@ -14,10 +14,10 @@ class ListTests {
 
 	@Test
 	void listFactoryTest() {
-		AbstractList<String> miLista = ListFactory.getList(1);	
+		AbstractList<String> miLista = (new ListFactory<String>()).getList(1);	
 		assertEquals(miLista.SINGLE_LINKED_LIST, miLista.getType());
 		
-		AbstractList<String> miListaDouble = ListFactory.getList(2);	
+		AbstractList<String> miListaDouble = (new ListFactory<String>()).getList(2);
 		assertEquals(miListaDouble.DOUBLE_LINKED_LIST, miListaDouble.getType());
 	}
 	
