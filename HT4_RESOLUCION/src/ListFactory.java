@@ -6,22 +6,22 @@
  * @author MAAG
  *
  */
-public class ListFactory {
+public class ListFactory<T> {
 	
-	public static AbstractList<String> getList(int listType){
+	public AbstractList<T> getList(int listType){
 		
 		
 		
 		switch(listType){
 		case 1:{ //Single Linked List
-			return new SingleLinkedList<String>();
+			return new SingleLinkedList<T>();
 		}
 		case 2:{
-			return new DoubleLinkedList<String>();
+			return new DoubleLinkedList<T>();
 		}
 		
 		default:{
-			return new SingleLinkedList<String>();
+			return new SingleLinkedList<T>();
 		}
 		}
 	}
