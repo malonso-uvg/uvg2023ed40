@@ -127,7 +127,7 @@ public class BinarySearchTree<E extends Comparable<E>>
         BinaryTree<E> child;
 
         // found at root: done
-        if (rootValue.equals(value)) return root;
+        if (ordering.compare(rootValue,value) == 0) return root;
         // look left if less-than, right if greater-than
         if (ordering.compare(rootValue,value) < 0)
         {
