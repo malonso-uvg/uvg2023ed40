@@ -1,8 +1,12 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.junit.jupiter.api.Test;
 
 import structure5.RedBlackSearchTree;
+import edu.uvg.ht9.*;
 
 /**
  * 
@@ -16,12 +20,19 @@ class RedBlackTree {
 
 	@Test
 	void InsertionRedBlackTree() {
-		RedBlackSearchTree<String> arbolStrings = new RedBlackSearchTree<String>();
-		arbolStrings.add("10");
-		arbolStrings.add("20");
-		arbolStrings.add("30");
-		arbolStrings.add("40");
-		arbolStrings.add("50");
+		RedBlackSearchTree<Palabra> miDiccionario = new RedBlackSearchTree<Palabra>();
+		
+		miDiccionario.add(new Palabra("dog", "perro"));
+		miDiccionario.add(new Palabra("house", "casa"));
+		miDiccionario.add(new Palabra("window", "ventana"));
+		
+		Palabra miBusqueda = miDiccionario.get(new Palabra("house", ""));
+		
+		assertEquals("house", miBusqueda.getEnglish());
+		assertEquals("casa", miBusqueda.getSpanish());
+				
+		
+		
 	}
 
 }

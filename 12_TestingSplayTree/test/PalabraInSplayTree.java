@@ -2,8 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import structure5.ComparadorPalabras;
-import structure5.Palabra;
+import edu.uvg.ht9.*;
 import structure5.SplayTree;
 
 class PalabraInSplayTree {
@@ -17,8 +16,11 @@ class PalabraInSplayTree {
 		miDiccionario.add(new Palabra("window", "ventana"));
 		
 		
-		miDiccionario.get(new Palabra("house", ""));
-		miDiccionario.get(new Palabra("house", ""));
+		Palabra mibusqueda = miDiccionario.get(new Palabra("house", ""));
+		
+		assertEquals("house", mibusqueda.getEnglish());
+		assertEquals("casa", mibusqueda.getSpanish());
+		
 	}
 
 }
