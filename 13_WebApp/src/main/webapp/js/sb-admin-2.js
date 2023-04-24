@@ -100,12 +100,14 @@
 	
 	
 	//Evento del botón que creara una nueva pelicula
-	$("#btn-insert-movie").click(function(){
+	$("#btn-movie-insert").click(function(){
+		
+		//alert("Resultado: " + '/Grupo20/SaveMovieServlet?title=' + $('#txt-movie-title').val() + '&release_year=' + $('#txt-movie-release_year').val() + '&tagline=' + $('#txt-movie-tagline').val());
 				
 		$.ajax( {
 			
 			type: "GET",
-			url: '/Grupo20/SaveMovieServlet?title=' + $('#txt-movie-title').val() + '&release_year=' + $('#txt-movie-release').val() + '&tagline=' + $('#txt-movie-tagline').val() ,
+			url: '/Grupo20/SaveMovieServlet?title=' + $('#txt-movie-title').val() + '&release_year=' + $('#txt-movie-release_year').val() + '&tagline=' + $('#txt-movie-tagline').val() ,
 			success: function(data) {
 			    alert("Resultado: " + data.resultado);
 			}
