@@ -10,13 +10,18 @@ package edu.uvg.graphs;
 public class FloydWarshall {
 
 	private int[][] distancias;
-	private char[][] recorridos;
+	private String[][] recorridos;
+	private String[] vertices;
 	private int SIZE;
 	
-	public FloydWarshall(int [][]_distancias, char[][] _recorridos, int matriz_size) {
+	public FloydWarshall(int [][]_distancias, String[][] _recorridos, int matriz_size) {
 		SIZE = matriz_size;
 		distancias = _distancias;
 		recorridos = _recorridos;
+		vertices = new String[matriz_size];
+		for (int i = 0; i < matriz_size; i++) {
+			vertices[i] = _recorridos[0][i];
+		}
 	}
 
 	/**
@@ -36,14 +41,14 @@ public class FloydWarshall {
 	/**
 	 * @return the recorridos
 	 */
-	public char[][] getRecorridos() {
+	public String[][] getRecorridos() {
 		return recorridos;
 	}
 
 	/**
 	 * @param recorridos the recorridos to set
 	 */
-	public void setRecorridos(char[][] recorridos) {
+	public void setRecorridos(String[][] recorridos) {
 		this.recorridos = recorridos;
 	}
 
@@ -70,6 +75,7 @@ public class FloydWarshall {
 						int suma = distancias[j][i] + distancias[i][k]; 
 						if (suma < distancias[j][k]) {
 							distancias[j][k] = suma;
+							recorridos[j][k] = vertices[i];
 						}
 					}
 					
